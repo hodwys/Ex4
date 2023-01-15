@@ -223,15 +223,16 @@ void free_edges(pnode p){
 
 void add_node(pnode *head, int new_v){
     
+      int des1 = 0;
+      int weight2 = 0;
+    
     
     pnode in_graph = getNode(new_v,head);
     if(in_graph != NULL){
         free_edges(in_graph);
         in_graph->edges = NULL;
 
-        int des1 = 0;
-        int weight2 = 0;
-    
+
         while (scanf("%d",&des1)!=0){
            if(scanf("%d",&weight2)!=0){
 
@@ -273,9 +274,6 @@ void add_node(pnode *head, int new_v){
         new_node->edges = NULL;
         new_node->next = NULL;
         cur->next = new_node;
-
-        int des1 = 0;
-        int weight2 = 0;
         
         while (scanf("%d",&des1)!=0){   
             if(scanf("%d",&weight2)!=0){
