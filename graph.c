@@ -155,11 +155,11 @@ void del_node(pnode *head, int del_v){
             if(cur->edges->next == NULL){
                 pedge p1 = cur->edges;
                 cur->edges = NULL;
-                free(p1);
+             //   free(p1);
             }else{
                 pedge p1 = cur->edges;
                 cur->edges = p1->next;
-                free(p1);
+               // free(p1);
             }           
         }else{ 
             pedge e = cur->edges;
